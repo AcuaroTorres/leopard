@@ -15,7 +15,11 @@ class CreateContratosTable extends Migration
     {
         Schema::create('contratos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('codigo',64);
+            $table->string('vice_presidencia',64);
+            $table->string('gerencia',64);
             $table->timestamps();
+            $table->softDeletes(); 
         });
     }
 

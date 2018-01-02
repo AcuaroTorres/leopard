@@ -14,8 +14,10 @@ class CreateExamensTable extends Migration
     public function up()
     {
         Schema::create('examens', function (Blueprint $table) {
-            $table->increments('id');
+            $table->smallIncrements('id');
+            $table->string('nombre',100);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
